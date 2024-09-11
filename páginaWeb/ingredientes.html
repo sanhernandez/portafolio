@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautify - Ingredientes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+     <!-- AOS CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link href="estilos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Beautify</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rutina.html">Rutina</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Ingredientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Buscar productos" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Visualización Interactiva de Ingredientes -->
+    <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300" class="container mt-5 pt-5">
+        <h2>Ingredientes Destacados</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card mb-4 shadow-sm">
+                    <img src="https://i.pinimg.com/564x/5a/9b/4a/5a9b4a4a82a301241a3efeade04851ee.jpg" class="card-img-top" alt="Ingrediente 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Ácido Hialurónico</h5>
+                        <p class="card-text">Hidrata profundamente la piel, manteniendo su elasticidad y suavidad.</p>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ingredientModal1">Más información</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-4 shadow-sm">
+                    <img src="https://i.pinimg.com/564x/fd/9a/ea/fd9aea7e9c446adf3b9d00cf0afddc04.jpg" class="card-img-top" alt="Ingrediente 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Retinol</h5>
+                        <p class="card-text">Mejora la textura de la piel, reduciendo arrugas y manchas oscuras.</p>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ingredientModal2">Más información</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-4 shadow-sm">
+                    <img src="https://i.pinimg.com/736x/20/63/78/206378e464937ab108e8995e5e66c2fb.jpg" class="card-img-top" alt="Ingrediente 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Vitamina C</h5>
+                        <p class="card-text">Ilumina la piel y protege contra el daño ambiental.</p>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ingredientModal3">Más información</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-4 shadow-sm">
+                    <img src="https://i.pinimg.com/236x/31/52/15/315215160a30c237b3357af948f6489f.jpg" class="card-img-top" alt="Ingrediente 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Niacinamida</h5>
+                        <p class="card-text">Ilumina la piel y protege contra el daño ambiental.</p>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ingredientModal4">Más información</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="section-divider">
+        
+    <!-- Modals de Ingredientes -->
+    <!-- Modal para Ingrediente 1 -->
+    <div class="modal fade" id="ingredientModal1" tabindex="-1" aria-labelledby="ingredientModalLabel1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ingredientModalLabel1">Ácido Hialurónico</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>El ácido hialurónico es conocido por sus propiedades hidratantes. Se utiliza para rellenar la piel, mejorar su elasticidad y reducir la apariencia de arrugas.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Ingrediente 2 -->
+    <div class="modal fade" id="ingredientModal2" tabindex="-1" aria-labelledby="ingredientModalLabel2" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ingredientModalLabel2">Retinol</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>El retinol es un derivado de la vitamina A que ayuda a reducir la apariencia de arrugas, mejorar la textura de la piel y disminuir las manchas oscuras.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Ingrediente 3 -->
+    <div class="modal fade" id="ingredientModal3" tabindex="-1" aria-labelledby="ingredientModalLabel3" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ingredientModalLabel3">Vitamina C</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>La vitamina C es un antioxidante potente que ayuda a iluminar la piel, proteger contra los daños ambientales y estimular la producción de colágeno.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- Gráfico de Popularidad de Ingredientes -->
+    <div  data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300" class="container mt-5">
+        <h3>Popularidad de Ingredientes en el Mercado</h3>
+        <div class="row">
+            <div class="col-md-6">
+                <canvas id="myChart"></canvas>
+            </div>
+            <div  data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300" class="col-md-6">
+                <p>Esta gráfica ilustra la popularidad de los ingredientes en el mercado de productos de cuidado de la piel. La popularidad se basa en la frecuencia con la que cada ingrediente se menciona en las fórmulas y en las tendencias de consumo actuales.</p>
+                <p><strong>Vitamina C:</strong> Considerada una de las más populares debido a sus beneficios antioxidantes y de iluminación de la piel.</p>
+                <p><strong>Ácido Hialurónico:</strong> Muy popular por sus propiedades hidratantes y de relleno de arrugas.</p>
+                <p><strong>Niacinamida:</strong> Conocida por su capacidad para mejorar la textura de la piel y reducir la hiperpigmentación.</p>
+                <p><strong>Retinol:</strong> Valorada por sus propiedades antienvejecimiento y mejora de la textura de la piel.</p>
+            </div>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- Comparaciones de Ingredientes -->
+    <div class="container mt-5 section-secondary">
+        <h3  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Comparaciones de Ingredientes</h3>
+        <div class="row">
+            <div  data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300" class="col-md-6 mt-5">
+                <h5>Comparar Ácido Hialurónico y Retinol</h5>
+                <p>El ácido hialurónico y el retinol tienen propiedades distintas. El ácido hialurónico se enfoca en la hidratación, mientras que el retinol trabaja en la renovación celular y reducción de arrugas.</p>
+                <!-- Aquí puedes añadir una herramienta de comparación como un gráfico o una tabla -->
+            </div>
+            <div  data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300" class="col-md-6 mt-5">
+                <h5>Comparar Vitamina C y Ácido Hialurónico</h5>
+                <p>La vitamina C es un potente antioxidante que ilumina la piel, mientras que el ácido hialurónico proporciona hidratación profunda. Ambos son esenciales pero tienen efectos complementarios.</p>
+                <!-- Aquí puedes añadir una herramienta de comparación como un gráfico o una tabla -->
+            </div>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- Efectividad de Ingredientes -->
+    <div  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" class="mb-4 container section-secondary">
+        <h3>Efectividad de Ingredientes</h3>
+        <p>Esta gráfica ilustra la efectividad de diferentes ingredientes en función de los tipos de piel: seca, grasa, mixta y sensible. Cada ingrediente tiene una eficacia variable dependiendo del tipo de piel para el que está destinado. La gráfica muestra cómo se clasifica cada ingrediente en cuanto a su capacidad para mejorar las condiciones específicas de cada tipo de piel.</p>
+        <div style="width: 80%; margin: 0 auto; padding: 20px;">
+            <canvas id="effectivenessChart"></canvas>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" class="container mt-4 section-secondary">
+        <h4>Conclusiones y Recomendaciones</h4>
+        <p>Basado en la gráfica, recomendamos:</p>
+        <ul>
+            <li>Para piel seca: Utilizar productos con ácido hialurónico para una hidratación efectiva.</li>
+            <li>Para piel grasa: Optar por productos con retinol para controlar el exceso de sebo y mejorar la textura.</li>
+            <li>Para piel mixta: Ingredientes como la vitamina C y la niacinamida pueden equilibrar y calmar la piel.</li>
+            <li>Para piel sensible: La niacinamida es recomendada para reducir la inflamación y mejorar la tolerancia.</li>
+        </ul>
+    </div>
+    <br>
+    <!-- Incluye el script de Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Script para generar los gráficos -->
+    <script>
+        // Gráfico de Popularidad de Ingredientes
+        const ctx1 = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx1, {
+            type: 'doughnut',
+            data: {
+                labels: ['Vitamina C', 'Ácido Hialurónico', 'Niacinamida', 'Retinol'],
+                datasets: [{
+                    label: 'Popularidad en el Mercado',
+                    data: [40, 30, 20, 10], // Datos de ejemplo
+                    backgroundColor: [
+                        '#FF6384',
+                        '#36A2EB',
+                        '#FFCE56',
+                        '#4BC0C0'
+                    ],
+                    borderColor: [
+                        '#FF6384',
+                        '#36A2EB',
+                        '#FFCE56',
+                        '#4BC0C0'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Popularidad de Ingredientes en el Mercado',
+                        font: {
+                            size: 24
+                        }
+                    }
+                }
+            }
+        });
+
+        const ctx2 = document.getElementById('effectivenessChart').getContext('2d');
+        const effectivenessChart = new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: ['Ácido Hialurónico', 'Vitamina C', 'Retinol', 'Niacinamida'],
+                datasets: [
+                    {
+                        label: 'Piel Seca',
+                        data: [90, 70, 50, 80],
+                        backgroundColor: '#FF6384', // Rojo
+                    },
+                    {
+                        label: 'Piel Grasa',
+                        data: [60, 80, 90, 70],
+                        backgroundColor: '#36A2EB', // Azul
+                    },
+                    {
+                        label: 'Piel Mixta',
+                        data: [70, 75, 85, 65],
+                        backgroundColor: '#FFCE56', // Amarillo
+                    },
+                    {
+                        label: 'Piel Sensible',
+                        data: [80, 60, 55, 90],
+                        backgroundColor: '#4BC0C0', // Verde
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        stacked: true
+                    },
+                    y: {
+                        beginAtZero: true,
+                        stacked: true
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Efectividad de Ingredientes en Diferentes Tipos de Piel',
+                        font: {
+                            size: 24
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+
+    <!-- Incluye el script de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+     <!-- AOS JS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+     <script>
+         AOS.init();
+     </script>
+</body>
+</html>

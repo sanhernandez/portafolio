@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautify - Rutina de Maquillaje</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+     <!-- AOS CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link href="estilos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Beautify</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Rutina</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ingredientes.html">Ingredientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="guia.html">Guía</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Buscar productos" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Formulario Multistep -->
+    <div class="container mt-5 pt-5">
+        <h2>Crea tu Rutina Perfecta de Maquillaje</h2>
+        <form id="multistepForm">
+            <div class="step">
+                <h4>Paso 1: Tipo de piel</h4>
+                <div class="form-group">
+                    <label for="skinType">Selecciona tu tipo de piel:</label>
+                    <select id="skinType" class="form-control">
+                        <option value="normal">Normal</option>
+                        <option value="seca">Seca</option>
+                        <option value="grasa">Grasa</option>
+                        <option value="mixta">Mixta</option>
+                    </select>
+                </div>
+            </div>
+            <div class="step">
+                <h4>Paso 2: Estilo de maquillaje</h4>
+                <div class="form-group">
+                    <label for="makeupStyle">Selecciona tu estilo de maquillaje:</label>
+                    <select id="makeupStyle" class="form-control">
+                        <option value="natural">Natural</option>
+                        <option value="glam">Glamour</option>
+                        <option value="dramatico">Dramático</option>
+                        <option value="minimalista">Minimalista</option>
+                    </select>
+                </div>
+            </div>
+            <div class="step">
+                <h4>Paso 3: Preferencias</h4>
+                <div class="form-group">
+                    <label for="preferences">Selecciona tus preferencias:</label>
+                    <select id="preferences" class="form-control">
+                        <option value="vegano">Vegano</option>
+                        <option value="sin_parabenos">Sin Parabenos</option>
+                        <option value="sin_fragancia">Sin Fragancia</option>
+                    </select>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="generateRoutine()">Obtener Rutina</button>
+        </form>
+
+        <!-- Contenedor para mostrar el mensaje de "Tu rutina está abajo" -->
+    <div id="mensajeRutina" class="alert alert-info" style="display: none;"></div>
+         <!-- Contenedor para mostrar la rutina generada -->
+    <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300" id="routineResult" class="mt-5"></div>
+    </div>
+
+    <script>
+        // Función para generar la rutina de maquillaje
+        function generateRoutine() {
+            const skinType = document.getElementById("skinType").value;
+            const makeupStyle = document.getElementById("makeupStyle").value;
+            const preferences = document.getElementById("preferences").value;
+            
+            let routine = "<h3> Tu Rutina de Maquillaje Personalizada</h3>";
+            
+            // Ejemplos para Tipo de Piel
+            switch(skinType) {
+                case "normal":
+                    routine += "<p><i class='bi bi-circle' style='color: #d4a373; padding-right: 10px;''></i><strong>Tipo de Piel:</strong> Tu piel normal tiene un equilibrio natural. Te recomendamos productos ligeros que mantengan ese equilibrio. Una hidratante ligera y un primer suave serán la clave para que tu maquillaje se vea fresco todo el día.</p>";
+                    break;
+                case "seca":
+                    routine += "<p><i class='bi bi-droplet' style='color: #5bc0be; padding-right: 10px;''></i><strong>Tipo de Piel:</strong> Para la piel seca, es esencial mantener la hidratación. Usa productos hidratantes que retengan la humedad. Un primer hidratante y una base con acabado luminoso serán ideales para que tu maquillaje no se sienta tirante</p>";
+                    break;
+                case "grasa":
+                    routine += "<p><i class='bi bi-brightness-high' style='color: #ffd60a; padding-right: 10px;''></i></i><strong>Tipo de Piel:</strong> La piel grasa necesita productos que controlen el brillo. Te sugerimos utilizar un primer matificante y bases libres de aceites. Asegúrate de sellar tu maquillaje con polvos traslúcidos para un acabado mate y duradero.</p>";
+                    break;
+                case "mixta":
+                    routine += "<p><i class='fa-solid fa-circle-half-stroke' style='color: #f7c59f; padding-right: 10px;''></i><strong>Tipo de Piel:</strong> Con la piel mixta, es importante balancear las áreas secas y grasas. Usa un primer adaptado a tu tipo de piel, aplicando más cantidad en las zonas grasas. Opta por productos que regulen la grasa en la zona T y mantengan hidratadas las mejillas.</p>";
+                    break;
+            }
+
+            // Ejemplos para Estilo de Maquillaje
+            switch(makeupStyle) {
+                case "natural":
+                    routine += "<p><i class='bi bi-flower2' style='color: #ff4d6d; padding-right: 10px;''></i><strong>Estilo de Maquillaje:</strong> Para un look natural, menos es más. Te sugerimos usar una base ligera o BB cream, un toque de rubor en crema, y un bálsamo labial. Para los ojos, una máscara de pestañas que defina sin añadir mucho volumen será perfecta.</p>";
+                    break;
+                case "glam":
+                    routine += "<p><i class='bi bi-gem' style='color: #023e8a; padding-right: 10px;''></i><strong>Estilo de Maquillaje:</strong> Para un estilo glam, usa una base de cobertura total y un iluminador para resaltar tus facciones. Añade sombras metálicas en tonos dorados o plateados, delineador y pestañas postizas para un look impactante.</p>";
+                    break;
+                case "dramatico":
+                    routine += "<p><i class='bi bi-palette' style='color: #5b8e7d; padding-right: 10px;''></i><strong>Estilo de Maquillaje:</strong> El look dramático es para quien quiere destacar. Opta por un maquillaje de ojos intenso, con delineado oscuro y sombras ahumadas. Complementa con un labial fuerte y asegúrate de contornear tu rostro para resaltar tus facciones.</p>";
+                    break;
+                case "minimalista":
+                    routine += "<p><i class='bi bi-circle-fill' style='color: #bb9457; padding-right: 10px;''></i><strong>Estilo de Maquillaje:</strong> Un estilo minimalista se centra en productos multifuncionales. Usa una base ligera, un poco de corrector, y un rubor que también puedas usar en los labios. Mantén los ojos simples con máscara de pestañas y un delineado sutil.</p>";
+                    break;
+            }
+
+            // Ejemplos para Preferencias
+            switch(preferences) {
+                case "vegano":
+                    routine += "<p><i class='fa-solid fa-leaf' style='color: #adc178; padding-right: 10px;''></i><strong>Preferencias:</strong> Has seleccionado productos veganos. Te recomendamos fórmulas que no contienen ingredientes de origen animal y que además son cruelty-free. Esta rutina es perfecta si quieres cuidar tanto de tu piel como del medio ambiente.</p>";
+                    break;
+                case "sin_parabenos":
+                    routine += "<p><i class='fa-solid fa-seedling' style='color: #386641; padding-right: 10px;''></i><strong>Preferencias:</strong> Tu preferencia por productos sin parabenos es ideal para evitar ciertos conservantes. Todos los productos en esta rutina están libres de estos químicos, manteniendo la fórmula lo más natural posible.</p>";
+                    break;
+                case "sin_fragancia":
+                    routine += "<p><i class='fa-solid fa-spray-can' style='color: #3a506b; padding-right: 10px;''></i> <strong>Preferencias:</strong> Los productos sin fragancia son perfectos para pieles sensibles o si prefieres evitar aromas fuertes. Cada producto seleccionado en tu rutina está libre de fragancias añadidas para mantener la suavidad en tu piel.</p>";
+                    break;
+            }
+
+            // Mostrar el mensaje de que la rutina ha sido generada
+            document.getElementById("mensajeRutina").style.display = "block";
+            document.getElementById("mensajeRutina").innerHTML = "¡Tu rutina ha sido generada! Desplázate hacia abajo para verla.";
+            // Mostrar la rutina generada
+            document.getElementById("routineResult").innerHTML = routine;
+        }
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+     <!-- AOS JS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+     <script>
+         AOS.init();
+     </script>
+</body>
+</html>

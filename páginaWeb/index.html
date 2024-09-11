@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautify - Inicio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link href="estilos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Beautify</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rutina.html">Rutina</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ingredientes.html">Ingredientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Buscar productos" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+   <!-- Slider 
+   <div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://i.pinimg.com/236x/23/ec/2d/23ec2d4b36ac991bfa72bf15d74f3214.jpg" class="d-block w-100 slide-image" alt="Slide 1">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Primera Slide</h5>
+                <p>Descripción del primer slide.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="https://i.pinimg.com/236x/dd/bd/02/ddbd02ac50aa3b34371d2f8fd61af086.jpg" class="d-block w-100 slide-image" alt="Slide 2">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Segunda Slide</h5>
+                <p>Descripción del segundo slide.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="https://i.pinimg.com/236x/ef/d3/f1/efd3f1b1f53c9732ffe3c9d82bc39f10.jpg" class="d-block w-100 slide-image" alt="Slide 3">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Tercera Slide</h5>
+                <p>Descripción del tercer slide.</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+    </button>
+</div>--> 
+<!-- CARRUSEL -->
+<div id="MiCarrusel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" class="active" data-bs-target="#MiCarrusel" data-bs-slide-to="0" arial-label="Slide 0"></button>
+        <button type="button" data-bs-target="#MiCarrusel" data-bs-slide-to="1" arial-label="Slide 1"></button>
+        <button type="button" data-bs-target="#MiCarrusel" data-bs-slide-to="2" arial-label="Slide 2"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://i.pinimg.com/736x/69/95/36/6995368db42ea2f8f0943f1f66fbb4fe.jpg">
+            <div class="container">
+                <div class="carousel-caption text-start">
+                    <div class="fondo">
+                        <p>Descubre el secreto para una piel radiante</p>
+                    </div>
+                    <p><a href="productos.html" class="btn btn-sm btn-primary">+ Información</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="https://i.pinimg.com/236x/dd/bd/02/ddbd02ac50aa3b34371d2f8fd61af086.jpg">
+            <div class="container">
+                <div class="carousel-caption">
+                    <div class="fondo">
+                        <p>Encuentra los productos perfectos para tu piel</p>
+                    </div>
+                    <p><a href="#" class="btn btn-sm btn-primary">+ Información</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="https://i.pinimg.com/236x/95/03/2f/95032fa62920def0db021cb235b717f2.jpg">
+            <div class="container">
+                <div class="carousel-caption text-end">
+                    <div class="fondo">
+                        <p>Encuentra la belleza en cada detalle</p>
+                    </div>
+                    <p><a href="#" class="btn btn-sm btn-primary">+ Información</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#MiCarrusel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#MiCarrusel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+    <!-- Sección Principal -->
+    <div class="container mt-5" class="section-primary">
+        <h1>Bienvenido a Beautify</h1>
+        <p>Descubre nuestros tratamientos y productos para una piel radiante.</p>
+        <p>El destino definitivo para todas tus necesidades de cuidado de la piel y belleza. En nuestra página, hemos combinado lo mejor de ambos mundos para ofrecerte una experiencia completa y enriquecedora.</p>
+    </div>
+
+<!-- Sección Curva con Producto -->
+<div id="curved-section" class="curved-section mt-5 pt-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div id="product-description" class="col-md-6 product-description">
+                <p>Explora, descubre y transforma tu rutina de cuidado y belleza con nosotros. Estamos aquí para ayudarte a lucir y sentirte mejor cada día. ¡Empieza tu viaje con Beautify hoy mismo!</p>
+                <p>Productos diseñados para hidratar y revitalizar la piel. Ideal para todo tipo de piel, especialmente para pieles secas y sensibles.</p>
+            </div>
+            <div class="col-md-6">
+                <img id="product-image" src="img/productoDestacado.png" alt="Producto Destacado" class="product-image">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Sección Secundaria -->
+<div class="container mt-5 section-secondary">
+    <h1 data-aos="fade-up" data-aos-duration="1000"> ¿Qué encontrarás aquí?</h1>
+    <div class="icon-text-container">
+        <i class="fa-solid fa-1 icon"></i>
+        <h2 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="800">Productos de Skincare de Alta Calidad</h2>
+    </div>
+    <p data-aos="fade-left" data-aos-duration="1000" data-aos-delay="700">Desde limpiadores y tónicos hasta serums y cremas, te ofrecemos una gama completa de productos diseñados para cuidar y revitalizar tu piel. Con ingredientes naturales y fórmulas innovadoras, cada producto está seleccionado para brindarte resultados visibles y duraderos.</p>
+    <div class="icon-text-container">
+        <i class="fa-solid fa-2 icon"></i>
+        <h2 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="700">Maquillaje y Belleza</h2>
+    </div>
+    <p data-aos="fade-left" data-aos-duration="1000" data-aos-delay="700">Explora nuestra colección de maquillaje, que incluye desde labiales y sombras hasta bases y correctores. Nuestros productos están formulados para resaltar tu belleza natural y adaptarse a todos los estilos y ocasiones.</p>
+    <div class="icon-text-container">
+        <i class="fa-solid fa-3 icon"></i>
+        <h2 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="700">Guías y Consejos</h2>
+    </div>
+    <p data-aos="fade-left" data-aos-duration="1000" data-aos-delay="700">Navega a través de nuestras guías detalladas sobre rutinas de cuidado de la piel, técnicas de maquillaje y tendencias de belleza. Aprenderás a maximizar el potencial de nuestros productos y a incorporar las últimas tendencias en tu rutina diaria.</p>
+    <br>
+</div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+     <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

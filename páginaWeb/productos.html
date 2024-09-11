@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautify - Productos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+     <!-- AOS CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link href="estilos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Beautify</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rutina.html">Rutina</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ingredientes.html">Ingredientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Buscar productos" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Lista de Productos -->
+    <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300" class="container mt-5 pt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="img/Rodillo.png" class="card-img-top" alt="Producto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Rodillo de Jade</h5>
+                        <p class="card-text">Herramienta de masaje facial que mejora la circulación y reduce la hinchazón.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1">Ver detalles</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="img/antiojeras.png" class="card-img-top" alt="Producto 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Parches antiojeras</h5>
+                        <p class="card-text">Parches que reducen ojeras y la hinchazón bajo los ojos.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal2">Ver detalles</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="img/cepilloFacial.png" class="card-img-top" alt="Producto 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Cepillo limpiador facial</h5>
+                        <p class="card-text">Limpia profundamente tu piel y elimina impurezas.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal3">Ver detalles</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="img/cremaHidratante.png" class="card-img-top" alt="Producto 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Cremas hidratantes</h5>
+                        <p class="card-text">Mantén tu piel hidratada y protegida todo el día.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal4">Ver detalles</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="img/bandaCabello.png" class="card-img-top" alt="Producto 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Banda para el cabello</h5>
+                        <p class="card-text">Mantén tu cabello alejado mientras cuidas tu piel.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal5">Ver detalles</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="img/labial.png" class="card-img-top" alt="Producto 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Labial transparente</h5>
+                        <p class="card-text">Labial transparente que cambia de color y contiene una flor en su interior.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal6">Ver detalles</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Agregar más productos aquí -->
+        </div>
+    </div>
+
+    <!-- Modals de Productos -->
+    <!-- Modal para Producto 1-->
+    <div class="modal fade" id="productModal1" tabindex="-1" aria-labelledby="productModalLabel1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel1">Rodillo de Jade</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Accordion para más información -->
+                    <div class="accordion" id="accordionProduct1">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
+                                    Material
+                                </button>
+                            </h2>
+                            <div id="collapseOne1" class="accordion-collapse collapse show" aria-labelledby="headingOne1" data-bs-parent="#accordionProduct1">
+                                <div class="accordion-body">
+                                    Piedra de jade auténtica, conocida por sus propiedades calmantes.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo1">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo1" aria-expanded="false" aria-controls="collapseTwo1">
+                                    Beneficios
+                                </button>
+                            </h2>
+                            <div id="collapseTwo1" class="accordion-collapse collapse" aria-labelledby="headingTwo1" data-bs-parent="#accordionProduct1">
+                                <div class="accordion-body">
+                                    Mejora la circulación, reduce la hinchazón, favorece la absorción de sueros y cremas.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree1">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree1" aria-expanded="false" aria-controls="collapseThree1">
+                                    Modo de Uso
+                                </button>
+                            </h2>
+                            <div id="collapseThree1" class="accordion-collapse collapse" aria-labelledby="headingThree1" data-bs-parent="#accordionProduct1">
+                                <div class="accordion-body">
+                                    Masajea el rostro con movimientos ascendentes, empezando por el cuello y subiendo hacia la frente.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Producto 2 -->
+    <div class="modal fade" id="productModal2" tabindex="-1" aria-labelledby="productModalLabel2" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel2">Parches antiojeras</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Accordion para más información -->
+                    <div class="accordion" id="accordionProduct2">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne2">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
+                                    Ingredientes
+                                </button>
+                            </h2>
+                            <div id="collapseOne2" class="accordion-collapse collapse show" aria-labelledby="headingOne2" data-bs-parent="#accordionProduct2">
+                                <div class="accordion-body">
+                                    Pueden incluir colágeno, ácido hialurónico, cafeína, y extractos de plantas para hidratar y revitalizar la piel.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
+                                    Beneficios
+                                </button>
+                            </h2>
+                            <div id="collapseTwo2" class="accordion-collapse collapse" aria-labelledby="headingTwo2" data-bs-parent="#accordionProduct2">
+                                <div class="accordion-body">
+                                    Ayudan a reducir la hinchazón, disminuyen las ojeras, e hidratan el área delicada debajo de los ojos. También ofrecen una sensación refrescante y relajante.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree2" aria-expanded="false" aria-controls="collapseThree2">
+                                    Modo de Uso
+                                </button>
+                            </h2>
+                            <div id="collapseThree2" class="accordion-collapse collapse" aria-labelledby="headingThree2" data-bs-parent="#accordionProduct2">
+                                <div class="accordion-body">
+                                    Coloca los parches en el área debajo de los ojos durante 15-20 minutos. Úsalos por la mañana para una mirada más fresca o antes de una ocasión especial.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Producto 3 -->
+    <div class="modal fade" id="productModal3" tabindex="-1" aria-labelledby="productModalLabel3" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel3">Cepillo limpiador facial</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body"> 
+                    <!-- Accordion para más información -->
+                    <div class="accordion" id="accordionProduct3">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne3">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne3" aria-expanded="true" aria-controls="collapseOne3">
+                                    Material
+                                </button>
+                            </h2>
+                            <div id="collapseOne3" class="accordion-collapse collapse show" aria-labelledby="headingOne3" data-bs-parent="#accordionProduct3">
+                                <div class="accordion-body">
+                                    Cerdas suaves de silicona o microfibra que son adecuadas para todo tipo de pieles, incluso las sensibles.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo3" aria-expanded="false" aria-controls="collapseTwo3">
+                                    Beneficios
+                                </button>
+                            </h2>
+                            <div id="collapseTwo3" class="accordion-collapse collapse" aria-labelledby="headingTwo3" data-bs-parent="#accordionProduct3">
+                                <div class="accordion-body">
+                                    Proporciona una limpieza profunda, elimina impurezas y células muertas, y ayuda a prevenir brotes de acné. También mejora la textura de la piel y prepara el rostro para una mejor absorción de productos.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree3" aria-expanded="false" aria-controls="collapseThree3">
+                                    Modo de Uso
+                                </button>
+                            </h2>
+                            <div id="collapseThree3" class="accordion-collapse collapse" aria-labelledby="headingThree3" data-bs-parent="#accordionProduct3">
+                                <div class="accordion-body">
+                                    Aplica tu limpiador facial favorito y usa el cepillo en movimientos circulares suaves sobre tu rostro. Enjuaga y seca. Úsalo de 2 a 3 veces por semana.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Producto 4-->
+    <div class="modal fade" id="productModal4" tabindex="-1" aria-labelledby="productModalLabel4" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel4">Cremas hidratantes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body"> 
+                    <!-- Accordion para más información -->
+                    <div class="accordion" id="accordionProduct4">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne4">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne4" aria-expanded="true" aria-controls="collapseOne4">
+                                    Ingredientes
+                                </button>
+                            </h2>
+                            <div id="collapseOne4" class="accordion-collapse collapse show" aria-labelledby="headingOne4" data-bs-parent="#accordionProduct4">
+                                <div class="accordion-body">
+                                    Puede contener ácido hialurónico, glicerina, aceites naturales, y vitaminas E y C.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo4" aria-expanded="false" aria-controls="collapseTwo4">
+                                    Beneficios
+                                </button>
+                            </h2>
+                            <div id="collapseTwo4" class="accordion-collapse collapse" aria-labelledby="headingTwo4" data-bs-parent="#accordionProduct4">
+                                <div class="accordion-body">
+                                    Mantienen la piel hidratada, protegen la barrera cutánea, y previenen la sequedad y descamación. Las cremas hidratantes también ayudan a suavizar la piel y le dan un brillo saludable.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree4" aria-expanded="false" aria-controls="collapseThree4">
+                                    Modo de Uso
+                                </button>
+                            </h2>
+                            <div id="collapseThree4" class="accordion-collapse collapse" aria-labelledby="headingThree4" data-bs-parent="#accordionProduct4">
+                                <div class="accordion-body">
+                                    Aplica una pequeña cantidad en la cara y cuello después de limpiar y tonificar la piel. Masajea suavemente hasta que se absorba completamente.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Modal para Producto 5-->
+     <div class="modal fade" id="productModal5" tabindex="-1" aria-labelledby="productModalLabel5" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel5">Banda para el cabello</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Accordion para más información -->
+                    <div class="accordion" id="accordionProduct5">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne5">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne5" aria-expanded="true" aria-controls="collapseOne5">
+                                    Material
+                                </button>
+                            </h2>
+                            <div id="collapseOne5" class="accordion-collapse collapse show" aria-labelledby="headingOne5" data-bs-parent="#accordionProduct5">
+                                <div class="accordion-body">
+                                    Suave y elástico, puede ser de algodón o microfibra para mayor comodidad.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo5">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo5" aria-expanded="false" aria-controls="collapseTwo5">
+                                    Beneficios
+                                </button>
+                            </h2>
+                            <div id="collapseTwo5" class="accordion-collapse collapse" aria-labelledby="headingTwo5" data-bs-parent="#accordionProduct5">
+                                <div class="accordion-body">
+                                    Mantiene el cabello alejado del rostro durante la aplicación de mascarillas, cremas o durante la limpieza facial. Evita que los productos entren en contacto con el cabello.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree5">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree5" aria-expanded="false" aria-controls="collapseThree5">
+                                    Modo de Uso
+                                </button>
+                            </h2>
+                            <div id="collapseThree5" class="accordion-collapse collapse" aria-labelledby="headingThree5" data-bs-parent="#accordionProduct5">
+                                <div class="accordion-body">
+                                    Coloca la banda en la frente para sujetar el cabello hacia atrás antes de comenzar tu rutina de skincare o maquillaje.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Modal para Producto 6-->
+    <div class="modal fade" id="productModal6" tabindex="-1" aria-labelledby="productModalLabel6" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel6">Labial transparente</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Accordion para más información -->
+                    <div class="accordion" id="accordionProduct6">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne6">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne6" aria-expanded="true" aria-controls="collapseOne6">
+                                    Ingredientes
+                                </button>
+                            </h2>
+                            <div id="collapseOne6" class="accordion-collapse collapse show" aria-labelledby="headingOne6" data-bs-parent="#accordionProduct6">
+                                <div class="accordion-body">
+                                    A menudo incluye aceites hidratantes como el de jojoba o coco, además de vitamina E para nutrir los labios.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo6">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo6" aria-expanded="false" aria-controls="collapseTwo6">
+                                    Beneficios
+                                </button>
+                            </h2>
+                            <div id="collapseTwo6" class="accordion-collapse collapse" aria-labelledby="headingTwo6" data-bs-parent="#accordionProduct6">
+                                <div class="accordion-body">
+                                    Este labial cambia de color según el pH de tus labios, proporcionando un tono personalizado y natural. Contiene una pequeña flor dentro, lo que lo convierte en un producto atractivo y único.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree6">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree6" aria-expanded="false" aria-controls="collapseThree6">
+                                    Modo de Uso
+                                </button>
+                            </h2>
+                            <div id="collapseThree6" class="accordion-collapse collapse" aria-labelledby="headingThree6" data-bs-parent="#accordionProduct6">
+                                <div class="accordion-body">
+                                    Aplica el labial directamente en los labios. Cambiará a un tono rosado que se adapta a tu piel y dura todo el día.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+     <!-- AOS JS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+     <script>
+         AOS.init();
+     </script>
+</body>
+</html>
